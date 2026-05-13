@@ -1,0 +1,40 @@
+.dashboard-wrapper {
+  height: 100vh;
+  overflow: hidden;
+}
+
+.dashboard-main {
+  background-color: #f8f9fc;
+  height: 100vh;
+  overflow-y: auto;
+}
+
+.dashboard-content {
+  padding: 2rem;
+}
+
+.dashboard-title {
+  font-weight: 600;
+  color: #000;
+}
+
+.dashboard-metrics {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.dashboard-card {
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  flex: 1 1 250px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+}
+
+.dashboard-chart-box {
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  flex: 1 1 400px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+}

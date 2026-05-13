@@ -1,0 +1,90 @@
+
+export const C = {
+  blue: "#1a73e8",
+  blueDark: "#1557b0",
+  blueLight: "#e8f0fe",
+  green: "#137333",
+  greenBg: "#e6f4ea",
+  amber: "#e65100",
+  amberBg: "#fff3e0",
+  red: "#c5221f",
+  redBg: "#fce8e6",
+  grey: "#5f6368",
+  greyLight: "#f8f9fa",
+  border: "#dadce0",
+  text: "#3c4043",
+  textLight: "#80868b",
+  white: "#fff",
+  bg: "#f4f5f7",
+};
+
+export const S = {
+  page: { fontFamily: "'Segoe UI', Roboto, sans-serif", background: C.bg, minHeight: "100vh" },
+  breadcrumb: { display: "flex", alignItems: "center", gap: "6px", padding: "14px 24px 0", fontSize: "13px", color: C.textLight },
+  breadcrumbLink: { color: C.blue, cursor: "pointer", fontWeight: "600" },
+  breadcrumbSep: { color: C.textLight, margin: "0 2px" },
+  breadcrumbCurrent: { color: C.text, fontWeight: "600" },
+  toolbar: { display: "flex", alignItems: "center", gap: "12px", padding: "14px 24px", background: C.white, borderBottom: `1px solid ${C.border}`, flexWrap: "wrap" },
+  toolbarTitle: { fontSize: "18px", fontWeight: "700", color: C.text, flex: 1 },
+  searchBox: { border: `1px solid ${C.border}`, borderRadius: "6px", padding: "7px 12px", fontSize: "13px", outline: "none", width: "220px" },
+  addBtn: { background: C.blue, color: C.white, border: "none", borderRadius: "6px", padding: "8px 18px", fontSize: "13px", fontWeight: "600", cursor: "pointer" },
+  card: { background: C.white, borderRadius: "12px", boxShadow: "0 1px 3px rgba(0,0,0,0.08), 0 1px 2px rgba(0,0,0,0.04)", overflow: "visible", marginBottom: "12px", transition: "box-shadow 0.2s" },
+  cardHeader: { display: "flex", alignItems: "center", padding: "13px 16px 10px", gap: "8px", borderBottom: "1px solid #f1f3f4" },
+  cardTitle: { fontSize: "15px", fontWeight: "600", color: C.blue, cursor: "pointer", flex: 1 },
+  cardStar: { color: "#f9ab00", fontSize: "18px" },
+  cardStats: { display: "grid", gridTemplateColumns: "64px 1fr 1fr 1fr 1fr 1fr 36px", alignItems: "center", padding: "10px 16px 14px", gap: "12px" },
+  statCell: { display: "flex", flexDirection: "column", gap: "2px" },
+  statValue: { fontSize: "14px", fontWeight: "600", color: C.text },
+  statLabel: { fontSize: "10px", color: C.textLight, textTransform: "uppercase", letterSpacing: "0.4px" },
+  arrowBtn: { background: C.blue, color: C.white, border: "none", borderRadius: "4px", width: "28px", height: "28px", cursor: "pointer", fontSize: "18px", display: "flex", alignItems: "center", justifyContent: "center" },
+  menuBtn: { background: "none", border: `1px solid ${C.border}`, borderRadius: "50%", width: "28px", height: "28px", cursor: "pointer", fontSize: "16px", color: C.grey, display: "flex", alignItems: "center", justifyContent: "center", position: "relative" },
+  dropdown: { position: "absolute", top: "32px", right: "0", background: C.white, border: `1px solid ${C.border}`, borderRadius: "8px", boxShadow: "0 4px 12px rgba(0,0,0,0.15)", zIndex: 100, minWidth: "160px" },
+  dropItem: { padding: "9px 16px", fontSize: "13px", cursor: "pointer", color: C.text, display: "block", width: "100%", textAlign: "left", border: "none", background: "none" },
+  tableWrap: { padding: "16px 24px", overflowX: "auto" },
+  table: { width: "100%", borderCollapse: "collapse", fontSize: "13px", background: C.white, borderRadius: "12px", overflow: "hidden", boxShadow: "0 1px 3px rgba(0,0,0,0.08)" },
+  th: { background: "#1e2a3a", color: C.white, padding: "10px 14px", textAlign: "left", fontWeight: "600", whiteSpace: "nowrap", cursor: "pointer", userSelect: "none" },
+  td: { padding: "10px 14px", borderBottom: "1px solid #f1f3f4", color: C.text, verticalAlign: "middle" },
+  tdAlt: { padding: "10px 14px", borderBottom: "1px solid #f1f3f4", color: C.text, background: "#fafafa", verticalAlign: "middle" },
+  actionIcon: (color) => ({ color, cursor: "pointer", fontSize: "16px", marginRight: "10px" }),
+  badge: (type) => {
+    const map = { 
+      active: [C.green, C.greenBg], 
+      completed: [C.green, C.greenBg], 
+      pending: [C.amber, C.amberBg], 
+      "in progress": [C.blue, C.blueLight], 
+      "on hold": [C.amber, C.amberBg], 
+      cancelled: [C.red, C.redBg] 
+    };
+    const [color, bg] = map[type?.toLowerCase()] || [C.blue, C.blueLight];
+    return { display: "inline-block", padding: "2px 10px", borderRadius: "16px", fontSize: "11px", fontWeight: "600", color, background: bg };
+  },
+  overlay: { position: "fixed", inset: 0, background: "rgba(0,0,0,0.45)", display: "flex", alignItems: "center", justifyContent: "center", zIndex: 1000 },
+  modal: { background: C.white, borderRadius: "16px", width: "100%", maxWidth: "580px", maxHeight: "88vh", overflow: "auto", boxShadow: "0 8px 32px rgba(0,0,0,0.2)" },
+  modalHeader: { display: "flex", alignItems: "center", justifyContent: "space-between", padding: "16px 22px", borderBottom: `1px solid ${C.border}` },
+  modalTitle: { fontSize: "15px", fontWeight: "700", color: C.text },
+  modalClose: { background: "none", border: "none", fontSize: "20px", cursor: "pointer", color: C.grey },
+  modalBody: { padding: "22px" },
+  modalFooter: { display: "flex", justifyContent: "flex-end", gap: "10px", padding: "14px 22px", borderTop: `1px solid ${C.border}` },
+  fGroup: { marginBottom: "16px" },
+  label: { display: "block", fontSize: "11px", fontWeight: "600", color: C.grey, marginBottom: "5px", textTransform: "uppercase", letterSpacing: "0.4px" },
+  input: { width: "100%", border: `1px solid ${C.border}`, borderRadius: "8px", padding: "8px 11px", fontSize: "13px", outline: "none", boxSizing: "border-box", color: C.text },
+  textarea: { width: "100%", border: `1px solid ${C.border}`, borderRadius: "8px", padding: "8px 11px", fontSize: "13px", outline: "none", boxSizing: "border-box", minHeight: "72px", resize: "vertical", color: C.text },
+  select: { width: "100%", border: `1px solid ${C.border}`, borderRadius: "8px", padding: "8px 11px", fontSize: "13px", outline: "none", boxSizing: "border-box", color: C.text, background: C.white },
+  grid2: { display: "grid", gridTemplateColumns: "1fr 1fr", gap: "14px" },
+  cancelBtn: { background: C.white, border: `1px solid ${C.border}`, borderRadius: "8px", padding: "8px 18px", fontSize: "13px", cursor: "pointer", color: C.text, fontWeight: "500" },
+  primaryBtn: (dis) => ({ background: dis ? "#c5cae9" : C.blue, color: C.white, border: "none", borderRadius: "8px", padding: "8px 18px", fontSize: "13px", cursor: dis ? "not-allowed" : "pointer", fontWeight: "600" }),
+  viewGrid: { display: "grid", gridTemplateColumns: "1fr 1fr", gap: "14px", marginBottom: "16px" },
+  viewField: { display: "flex", flexDirection: "column", gap: "3px" },
+  viewLabel: { fontSize: "10px", color: C.textLight, fontWeight: "700", textTransform: "uppercase" },
+  viewValue: { fontSize: "14px", color: C.text, fontWeight: "500" },
+  sectionHead: { fontSize: "13px", fontWeight: "700", color: C.text, margin: "20px 0 10px", paddingBottom: "6px", borderBottom: `2px solid ${C.border}` },
+  empty: { textAlign: "center", padding: "50px 20px", color: C.textLight, fontSize: "14px" },
+  listWrap: { padding: "16px 24px", display: "flex", flexDirection: "column", gap: "12px" },
+  pagination: { display: "flex", alignItems: "center", justifyContent: "space-between", padding: "12px 24px", fontSize: "13px", color: C.grey },
+  pageBtn: (dis) => ({ border: `1px solid ${C.border}`, borderRadius: "6px", padding: "5px 12px", background: dis ? C.greyLight : C.white, color: dis ? C.textLight : C.blue, cursor: dis ? "not-allowed" : "pointer", fontSize: "13px" }),
+};
+
+// Helpers (pure functions, no JSX)
+export const fmtGBP = (n) => n != null ? `£${Number(n).toLocaleString("en-GB", { minimumFractionDigits: 2, maximumFractionDigits: 2 })}` : "N/A";
+export const fmtDate = (d) => (d ? new Date(d).toLocaleDateString("en-GB") : "N/A");
+export const fmtDateInput = (d) => (d ? new Date(d).toISOString().split("T")[0] : "");

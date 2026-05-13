@@ -1,0 +1,11 @@
+textarea.form-control,
+select.form-control,
+select.form-control option {
+  background-color: #374151;
+  border: none;
+  color: white;
+}
+
+.dropdown-projects:hover{
+  background-color: #ffffff !important;
+}

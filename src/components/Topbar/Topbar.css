@@ -1,0 +1,92 @@
+.custom-topbar {
+  position: sticky;
+  top: 0;
+  background-color: #f3f4f6;
+  padding: 10px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+
+.topbar-search {
+  width: 250px;
+  padding: 8px 12px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 0.95rem;
+  visibility: hidden;
+}
+
+.topbar-right {
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+.topbar-icon {
+  font-size: 1.2rem;
+  cursor: pointer;
+  margin-right: 15px;
+  color: #555;
+}
+
+.topbar-avatar-container {
+  position: relative;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+.topbar-avatar {
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid #ddd;
+  margin-right: 8px; /* Added margin between avatar and name */
+}
+
+.topbar-user-name {
+  font-size: 0.95rem;
+  color: #333;
+  margin-right: 10px;
+}
+
+.topbar-dropdown {
+  position: absolute;
+  top: 45px;
+  right: 0;
+  background-color: rgb(0, 0, 0);
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  border-radius: 8px;
+  list-style: none;
+  padding: 8px 0;
+  width: 150px;
+  z-index: 100;
+}
+
+.topbar-dropdown-item {
+  padding: 10px 15px;
+  font-size: 0.95rem;
+  color: #ffffff;
+  cursor: pointer;
+}
+
+.topbar-dropdown-item:hover {
+  background-color: #f0f0f0;
+  color: #333;
+}
+.rotate-icon {
+  transform: rotate(180deg);
+  transition: transform 0.2s ease-in-out;
+}
+@media (max-width: 768px) {
+  .topbar-search{
+    display: none;
+  }
+  .custom-topbar
+{
+  justify-content: end;
+}
+}
