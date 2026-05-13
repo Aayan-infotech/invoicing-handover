@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "9903814958",
+    "project_id": "installer-project-assist",
+    "storage_bucket": "installer-project-assist.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:9903814958:android:77cfcc5415f43b72ee62bf",
+        "android_client_info": {
+          "package_name": "com.invoiceApp.app"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDXdr2dL90A_EGtL-1R5TDtpc6RdEh_ESo"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
